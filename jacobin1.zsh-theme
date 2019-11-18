@@ -19,8 +19,8 @@ autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable hg bzr git
 zstyle ':vcs_info:*:*' unstagedstr '!'
 zstyle ':vcs_info:*:*' stagedstr '+'
-zstyle ':vcs_info:*:*' formats "[%r] " "%s/%b " "%%u%c "
-zstyle ':vcs_info:*:*' actionformats "[%r] " "%s/%b " "%u%c (%a) "
+zstyle ':vcs_info:*:*' formats "[%r]" "%s/%b" "%%u%c"
+zstyle ':vcs_info:*:*' actionformats "[%r]" "%s/%b" "%u%c (%a)"
 zstyle ':vcs_info:*:*' nvcsformats "" "" ""
 
 # Display information about the current directory
@@ -47,7 +47,11 @@ git_dirty() {
 # Display information about the current repository
 #
 repo_information() {
-    echo "%F{cyan}${vcs_info_msg_0_%%/.}%F{8}$vcs_info_msg_1_`git_dirty`$vcs_info_msg_2_%f"
+    if [ -z $vcs_info_msg_0_ ]; then
+        echo "%F{cyan}$vcs_info_msg_0_%f"
+    else
+	echo "%F{cyan}${vcs_info_msg_0_%%/.} %F{8}$vcs_info_msg_1_`git_dirty` $vcs_info_msg_2_%f"
+    fi
 }
 
 precmd() {
