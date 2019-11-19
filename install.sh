@@ -51,7 +51,7 @@ rm -rf ./jacobin-zsh-theme;
 allchar="QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm1234567890";
 
 if [ -f "~/.zshrc" ]; then
-	if [ `uanme`="Darwin" ]; then
+	if [ `uname`="Darwin" ]; then
 		sed -i '' '/^ZSH_THEME="[$allchar]*"/ s/"[$allchar]*"/"jacobin1"/g' ~/.zshrc;
 	else 
 		sed -i '/^ZSH_THEME="[$allchar]*"/ s/"[$allchar]*"/"jacobin1"/g' ~/.zshrc;
