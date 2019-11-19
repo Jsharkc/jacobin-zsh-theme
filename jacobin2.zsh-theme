@@ -37,3 +37,5 @@ ${git_info}\
 ${git_sha}\
 %F{yellow}[%*]
 %${ret_status}%f"
+
+RPROMPT="%F{8}%n@%m%f"    # Display username if connected via SSH
