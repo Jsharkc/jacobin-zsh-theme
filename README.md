@@ -12,7 +12,16 @@ Jacobin theme is based on `refined`   theme and `ys` theme.
 ![demo](./jacobin2.png)
 
 ## Installation
-#### Clone the repository:
+
+### Use install.sh
+
+```shell
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/Jsharkc/jacobin-zsh-theme/master/install.sh) " 
+```
+
+### Manual install
+
+#### Clone the repository：
 ```
 $ git clone https://github.com/Jsharkc/jacobin-zsh-theme.git
 ```
