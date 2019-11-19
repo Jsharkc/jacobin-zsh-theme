@@ -16,7 +16,8 @@ Jacobin theme is based on `refined`   theme and `ys` theme.
 ### Use install.sh
 
 ```shell
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/Jsharkc/jacobin-zsh-theme/master/install.sh) " 
+$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/Jsharkc/jacobin-zsh-theme/master/install.sh) " 
+$ source ~/.zshrc
 ```
 
 ### Manual install
