@@ -29,28 +29,32 @@ if [ -z `command -v git` ]; then
 fi
 
 # clone 项目
-git clone https://github.com/Jsharkc/jacobin-zsh-theme.git
-
-# 把主题复制到 ~/.oh-my-zsh/themes
-if [ ! -d "~/.oh-my-zsh/themes" ]; then
-	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+if [ ! -d ./jacobin-zsh-theme ]; then
+	git clone https://github.com/Jsharkc/jacobin-zsh-theme.git;
 fi
 
-if [ ! -d "~/.oh-my-zsh/themes" ]; then
+# 把主题复制到 ~/.oh-my-zsh/themes
+if [ ! -d ~/.oh-my-zsh/themes ]; then
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)";
+fi
+
+if [ ! -d ~/.oh-my-zsh/themes ]; then
 	echo ".oh-my-zsh not exist";
 	exit 1;
 else
-	cp ./jacobin-zsh-theme/jacobin1.zsh-theme ~/.oh-my-zsh/themes
-	cp ./jacobin-zsh-theme/jacobin2.zsh-theme ~/.oh-my-zsh/themes
+	cp ./jacobin-zsh-theme/jacobin1.zsh-theme ~/.oh-my-zsh/themes;
+	cp ./jacobin-zsh-theme/jacobin2.zsh-theme ~/.oh-my-zsh/themes;
 fi
 
-allchar="QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm1234567890"
+rm -rf ./jacobin-zsh-theme;
+
+allchar="QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm1234567890";
 
 if [ -f "~/.zshrc" ]; then
 	if [ `uanme`="Darwin" ]; then
-		sed -i '' '/^ZSH_THEME="[$allchar]*"/ s/"[$allchar]*"/"jacobin1"/g' ~/.zshrc
+		sed -i '' '/^ZSH_THEME="[$allchar]*"/ s/"[$allchar]*"/"jacobin1"/g' ~/.zshrc;
 	else 
-		sed -i '/^ZSH_THEME="[$allchar]*"/ s/"[$allchar]*"/"jacobin1"/g' ~/.zshrc
+		sed -i '/^ZSH_THEME="[$allchar]*"/ s/"[$allchar]*"/"jacobin1"/g' ~/.zshrc;
 	fi
 fi
 
