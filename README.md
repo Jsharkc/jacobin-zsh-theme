@@ -5,11 +5,11 @@ Jacobin theme is based on `refined`   theme and `ys` theme.
 
 **Jacobin1 theme：**
 
-![demo](./jacobin1.png)
+![jacobin1](./jacobin1.png)
 
 **Jacobin2 theme：**
 
-![demo](./jacobin2.png)
+![jacobin2](./jacobin2.png)
 
 ## Installation
 
